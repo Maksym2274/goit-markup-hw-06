@@ -22,8 +22,10 @@ h6 {
   margin: 0;
 }
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  /* width: 1158px; */
+  width: 320px;
+  /* padding: 0 15px; */
+  padding: 0 16px;
   margin: 0 auto;
 }
 img {
@@ -127,22 +129,29 @@ img {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  max-width: 1440px;
-  padding: 188px 0;
+  /* max-width: 1440px; */
+  max-width: 320px;
+  /* padding: 188px 0; */
+  padding: 72px 0;
   margin: 0 auto;
 }
 .hero .container {
 }
+
 .hero-title {
   color: #fff;
   text-align: center;
-  font-size: 56px;
+  /* font-size: 56px; */
+  font-size: 36px;
   font-weight: 700;
-  line-height: 1.07;
+  /* line-height: 1.07; */
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  max-width: 496px;
+  /* max-width: 496px; */
+  max-width: 216px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
+  margin-bottom: 72px;
 }
 .hero-btn {
   color: #fff;
@@ -170,7 +179,8 @@ img {
 /* ======Benefits====== */
 
 .benefits {
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 0;
 }
 .visually-hidden {
   position: absolute;
@@ -187,13 +197,16 @@ img {
 }
 .benefits-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  /* gap: 24px; */
+  gap: 72px;
 }
 .benefits-list-item {
-  flex-basis: calc((100% - 72px) / 4);
+  /* flex-basis: calc((100% - 72px) / 4); */
 }
 .icon-container {
-  display: flex;
+  /* display: flex; */
+  display: none;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
@@ -207,14 +220,18 @@ img {
 }
 .benefits-subtitle {
   color: #2e2f42;
-  font-size: 20px;
-  font-weight: 500;
+  /* font-size: 20px; */
+  font-size: 36px;
+  /* font-weight: 500; */
+  font-weight: 700;
+  text-align: center;
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
 }
 .benefits-list-text {
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -223,7 +240,11 @@ img {
 
 .team {
   background-color: #f4f4fd;
-  padding: 120px 0;
+  /* padding: 120px 0; */
+  padding: 96px 0;
+}
+.team .container {
+  padding: 0 28px;
 }
 .team-title {
   color: #2e2f42;
@@ -237,11 +258,13 @@ img {
 }
 .team-list {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  /* gap: 24px; */
+  gap: 72px;
 }
 .team-list-item {
   background-color: #fff;
-  flex-basis: calc((100% - 72px) / 4);
+  /* flex-basis: calc((100% - 72px) / 4); */
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -696,4 +719,95 @@ textarea::placeholder {
 .modal-submit-btn:hover,
 .modal-submit-btn:focus {
   background-color: #404bbf;
+}
+/* ======Adaptive====== */
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+  /* ======Hero====== */
+  .hero {
+    padding: 112px 0;
+    max-width: 768px;
+  }
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    max-width: 496px;
+    margin-bottom: 36px;
+  }
+  /* ======Benefits====== */
+  .benefits-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .benefits-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  .benefits-subtitle {
+    text-align: start;
+  }
+  /* ======Our team====== */
+  .team > .container {
+    padding: 0 108px;
+  }
+  .team-list {
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+  .team-list-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    width: 1158px;
+    padding: 0 15px;
+  }
+  /* ======Hero====== */
+  .hero {
+    padding: 188px 0;
+    max-width: 1158px;
+  }
+  .hero-title {
+    font-size: 56px;
+    margin-bottom: 48px;
+  }
+  /* ======Benefits====== */
+  .benefits {
+    padding: 120px 0;
+  }
+  .benefits-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .benefits-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .icon-container {
+    display: flex;
+  }
+  .benefits-subtitle {
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .benefits-list-text {
+    font-weight: 400;
+  }
+  /* ======Our team====== */
+  .team {
+    padding: 120px 0;
+  }
+  .team > .container {
+    padding: 0 15px;
+  }
+  .team-list {
+    flex-wrap: nowrap;
+    gap: 24px;
+  }
+  .team-list-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
 }
