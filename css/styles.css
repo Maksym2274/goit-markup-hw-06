@@ -427,7 +427,6 @@ img {
 .footer-container-logo {
   /* margin-right: 120px; */
   text-align: center;
-  margin: 0 auto;
 }
 .footer-logo {
   color: #4d5ae5;
@@ -449,7 +448,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 288px;
+  width: 288px;
   text-align: left;
 }
 .footer-container-soc {
@@ -820,9 +819,17 @@ textarea::placeholder {
   .portfolio-list-item {
     width: 356px;
   }
-  .footer-container {
-  }
   /* ======Footer====== */
+  .footer-container {
+    width: 768px;
+    max-width: 530px;
+    margin: 0 auto;
+  }
+  .footer-logo {
+  }
+  .footer-text {
+    width: 264px;
+  }
 }
 
 @media screen and (min-width: 1158px) {
