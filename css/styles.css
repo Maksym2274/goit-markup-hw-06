@@ -145,6 +145,7 @@ img {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: auto;
 }
 .menu-close-btn {
   position: absolute;
@@ -186,7 +187,6 @@ img {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  margin-bottom: 168px;
 }
 .menu-item {
 }
@@ -206,9 +206,28 @@ img {
 .current {
   color: #404bbf;
 }
-.current {
-}
 .menu-address {
+}
+.menu-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.menu-address-item {
+}
+.menu-address-link {
+  color: #434455;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2px;
+  letter-spacing: 0.02em;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-style: normal;
+}
+.menu-address-link:hover,
+.menu-address-link:focus {
+  color: #404bbf;
 }
 .menu-icon-list {
   display: flex;
@@ -235,34 +254,6 @@ img {
 }
 .menu-icon {
   fill: #f4f4fd;
-}
-.menu-address-list {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-bottom: 48px;
-}
-.menu-address-item {
-}
-.menu-address-link {
-  color: #434455;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.2px;
-  letter-spacing: 0.02em;
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.menu-address-link:hover,
-.menu-address-link:focus {
-  color: #404bbf;
-}
-.team-icon-list {
-}
-.menu-icon-item {
-}
-.menu-icon-link {
-}
-.menu-icon {
 }
 
 /* ======Hero====== */
@@ -962,6 +953,7 @@ textarea::placeholder {
     color: #434455;
     /* font-size: 16px; */
     font-size: 12px;
+    font-style: normal;
     /* line-height: 1.5; */
     line-height: 1.16;
     letter-spacing: 0.02em;
